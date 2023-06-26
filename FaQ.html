@@ -6,8 +6,18 @@
 <link rel="stylesheet" href="https://raw.githack.com/fnc12345678/CSS/main/style.css">
     <link rel="icon" type="image/png" href="https://i.postimg.cc/1X4J8QpB/icon.png">
 <link rel="stylesheet" href="https://raw.githack.com/fnc12345678/CSS/main/FaQ-style.css">
- <script src="./scripts.js"></script>
 </head>
+    <script>
+  window.onload = function() {
+    var currentPage = window.location.href;
+
+    if (currentPage.substr(-5) === '.html') {
+      var newUrl = currentPage.substr(0, currentPage.length - 5);
+      window.history.replaceState({}, '', newUrl);
+    }
+  };
+</script>
+
 <body>
 
 
