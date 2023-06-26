@@ -10,7 +10,17 @@
             min-height: 102vh;
         }
     </style>
-    
+  <script>
+  window.onload = function() {
+    var currentPage = window.location.href;
+
+    if (currentPage.substr(-5) === '.html') {
+      var newUrl = currentPage.substr(0, currentPage.length - 5);
+      window.history.replaceState({}, '', newUrl);
+    }
+  };
+</script>
+  
 </head>
 <body >
 
