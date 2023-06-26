@@ -10,6 +10,15 @@
     <link rel="icon" type="image/png" href="https://i.postimg.cc/1X4J8QpB/icon.png">
 
   <script>
+
+     window.onload = function() {
+    var currentPage = window.location.href;
+
+    if (currentPage.substr(-5) === '.html') {
+      var newUrl = currentPage.substr(0, currentPage.length - 5);
+      window.history.replaceState({}, '', newUrl);
+    }
+  };
     function toggleCategory(category) {
   var categoryDivider = document.getElementById(category);
   categoryDivider.classList.toggle("open");
@@ -24,7 +33,7 @@ function toggleAnswer(questionNumber) {
   const answer = document.getElementById(`answer${questionNumber}`);
   answer.style.display = answer.style.display === "block" ? "none" : "block";
 }
-<script>
+</script>
 </head>
 <body>
     <nav>
