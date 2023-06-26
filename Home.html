@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>School Basic</title>
+    <link rel="stylesheet" href="https://raw.githack.com/fnc12345678/CSS/main/style.css">
+    <link rel="stylesheet" href="https://raw.githack.com/fnc12345678/CSS/main/Home-style.css">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/1X4J8QpB/icon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<script>
+      $(document).ready(function() {
+        $("#news-slider").owlCarousel({
+          items: 3,
+          navigation: true,
+          navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+          autoPlay: true
+        });
+        
+        $(".prev").click(function(){
+          $("#news-slider").trigger('prev.owl.carousel');
+        });
+        
+        $(".next").click(function(){
+          $("#news-slider").trigger('next.owl.carousel');
+        });
+      });
+      
+    </script>
+    <style>
+      .header {
+    height: 40vh;
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    background-image: linear-gradient(to right bottom, rgba(76, 216, 255, 0.8), rgba(30, 108, 217, 0.8)), url('https://i.postimg.cc/5tqsQjLf/study-7217599-1280.jpg'); 
+    height: 55vh;
+}
+
+</style>
+</head>
+
+<body>
+
+
+
+<nav>
+    <ul>
+        <li><a href="index.html">Welcome</a></li>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+            <a href="lessons.html">Lessons</a>
+            <ul>
+                <li><a href="cybersecurity.html">Cyber Security</a></li>
+                <li><a href="code.html">Code</a></li>
+                <li><a href="hacking.html">Hacking</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#0">Secret</a>
+            <ul>
+                <li><a href="secretCY.html">Secret Cyber Security</a></li>
+                <li><a href="secret.html">Secret Code</a></li>
+                <li><a href="secretHG.html">Secret Hacking</a></li>
+            </ul>
+        </li>
+        <li><a href="./contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+
+
+
+<header class="header">
+  <div class="brand-box">
+  <span class="brand">
+    <img src="./Icon/icon.png" alt="School Basic Logo"> 
+  </span>
+</div>
+
+
+  
+  <div class="text-box">
+    <h1 class="heading-primary">
+      <span class="heading-primary-main">Discover the World of Education</span>
+      <span class="heading-primary-sub">Explore, Learn, Excel</span>
+    </h1>
+    <a href="lessons.html" class="btn btn-white btn-animated">Discover More</a>
+  </div>
+</header>
+
+<br>
+<div class="logo1">Our Lessons</div>
+
+<br>
+<br>
+<div class="cards">
+    <a href="#"><div class="card red">
+        <p class="tip">Cyber Security</p>
+        <p class="second-text">Lorem Ipsum</p>
+    </div> </a>
+   <a href="#"> <div class="card blue">
+        <p class="tip">Programming</p>
+        <p class="second-text">Lorem Ipsum</p>
+    </div></a>
+   <a href="#"> <div class="card green">
+        <p class="tip">Hacking</p>
+        <p class="second-text">Lorem Ipsum</p>
+    </div></a>
+</div>
+
+
+<br>
+<div class="logo1"> News</div>
+<br>
+  <div class="custom-nav">
+  <button class="post-slide read-more prev">&#8249;</button>
+  <button class="post-slide read-more next">&#8250;</button>
+</div>
+
+<div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="news-slider" class="owl-carousel">
+            <div class="post-slide">
+              <div class="post-img">
+                <img src="https://images.unsplash.com/photo-1596265371388-43edbaadab94?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" alt="">
+                <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+              </div>
+              <div class="post-content">
+                <h3 class="post-title">
+                  <a href="#">Lorem ipsum dolor sit amet.</a>
+                </h3>
+                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur cumque dolorum, ex incidunt ipsa laudantium necessitatibus neque quae tempora......</p>
+                <span class="post-date"><i class="fa fa-clock-o"></i>Out 27, 2019</span>
+                <a href="#" class="read-more">read more</a>
+              </div>
+            </div>
+            
+            <div class="post-slide">
+              <div class="post-img">
+                <img src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=503" alt="">
+                <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+              </div>
+              <div class="post-content">
+                <h3 class="post-title">
+                  <a href="#">Lorem ipsum dolor sit amet.</a>
+                </h3>
+                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur cumque dolorum, ex incidunt ipsa laudantium necessitatibus neque quae tempora......</p>
+                <span class="post-date"><i class="fa fa-clock-o"></i>Out 27, 2019</span>
+                <a href="#" class="read-more">read more</a>
+              </div>
+            </div>
+            
+            <div class="post-slide">
+              <div class="post-img">
+                <img src="https://images.unsplash.com/photo-1564979268369-42032c5ca998?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=500" alt="">
+                <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+              </div>
+              <div class="post-content">
+                <h3 class="post-title">
+                  <a href="#">Lorem ipsum dolor sit amet.</a>
+                </h3>
+                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur cumque dolorum, ex incidunt ipsa laudantium necessitatibus neque quae tempora......</p>
+                <span class="post-date"><i class="fa fa-clock-o"></i>Out 27, 2019</span>
+                <a href="#" class="read-more">read more</a>
+              </div>
+            </div>
+            
+            <div class="post-slide">
+              <div class="post-img">
+                <img src="https://images.unsplash.com/photo-1576659531892-0f4991fca82b?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" alt="">
+                <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+              </div>
+              <div class="post-content">
+                <h3 class="post-title">
+                  <a href="#">Lorem ipsum dolor sit amet.</a>
+                </h3>
+                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur cumque dolorum, ex incidunt ipsa laudantium necessitatibus neque quae tempora......</p>
+                <span class="post-date"><i class="fa fa-clock-o"></i>Out 27, 2019</span>
+                <a href="#" class="read-more">read more</a>
+              </div>
+            </div>
+            
+            <div class="post-slide">
+              <div class="post-img">
+                <img src="https://images.unsplash.com/photo-1586083702768-190ae093d34d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=305&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=505" alt="">
+                <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+              </div>
+              <div class="post-content">
+                <h3 class="post-title">
+                  <a href="#">Lorem ipsum dolor sit amet.</a>
+                </h3>
+                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur cumque dolorum, ex incidunt ipsa laudantium necessitatibus neque quae tempora......</p>
+                <span class="post-date"><i class="fa fa-clock-o"></i>Out 27, 2019</span>
+                <a href="#" class="read-more">read more</a>
+              </div>
+            </div>
+    
+            <div class="post-slide">
+              <div class="post-img">
+                <img src="https://images.unsplash.com/photo-1484656551321-a1161420a2a0?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=306&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=506" alt="">
+                <a href="#" class="over-layer"><i class="fa fa-link"></i></a>
+              </div>
+              <div class="post-content">
+                <h3 class="post-title">
+                  <a href="#">Lorem ipsum dolor sit amet.</a>
+                </h3>
+                <p class="post-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur cumque dolorum, ex incidunt ipsa laudantium necessitatibus neque quae tempora......</p>
+                <span class="post-date"><i class="fa fa-clock-o"></i>Out 27, 2019</span>
+                <a href="#" class="read-more">read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+
+
+
+<script>
+    const cards = document.querySelectorAll('.cards .card');
+
+    cards.forEach(card => {
+      card.addEventListener('mouseover', () => {
+        cards.forEach(otherCard => {
+          if (otherCard !== card) {
+            otherCard.classList.add('blur');
+          }
+        });
+      });
+
+      card.addEventListener('mouseout', () => {
+        cards.forEach(otherCard => {
+          if (otherCard !== card) {
+            otherCard.classList.remove('blur');
+          }
+        });
+      });
+    });
+</script>
+
+
+
+<footer class="footer">
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+        <li class="social-icon__item"><a class="social-icon__link" href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    </ul>
+    <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+    </ul>
+    <p>&copy; 2023  School Basic | All Rights Reserved</p>
+</footer>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
