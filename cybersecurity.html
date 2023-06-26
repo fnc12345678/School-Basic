@@ -1,0 +1,128 @@
+ <!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lezioni di Cyber Security</title>
+<link rel="stylesheet" href="https://raw.githack.com/fnc12345678/CSS/main/cybersecurity-style.css">
+<link rel="stylesheet" href="https://raw.githack.com/fnc12345678/CSS/main/style.css">
+<link rel="stylesheet" href="https://raw.githack.com/fnc12345678/JS/main/script.css">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/1X4J8QpB/icon.png">
+
+  <script>
+    function toggleCategory(category) {
+  var categoryDivider = document.getElementById(category);
+  categoryDivider.classList.toggle("open");
+
+  var lessons = document.getElementsByClassName(category);
+  for (var i = 0; i < lessons.length; i++) {
+    lessons[i].classList.toggle("open");
+  }
+}
+
+function toggleAnswer(questionNumber) {
+  const answer = document.getElementById(`answer${questionNumber}`);
+  answer.style.display = answer.style.display === "block" ? "none" : "block";
+}
+<script>
+</head>
+<body>
+    <nav>
+    <ul>
+        <li><a href="index.html">Welcome</a></li>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+            <a href="lessons.html">Lessons</a>
+            <ul>
+                <li><a href="cybersecurity.html">Cyber Security</a></li>
+                <li><a href="code.html">Code</a></li>
+                <li><a href="hacking.html">Hacking</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#0">Secret</a>
+            <ul>
+                <li><a href="secretCY.html">Secret Cyber Security</a></li>
+                <li><a href="secret.html">Secret Code</a></li>
+                <li><a href="secretHG.html">Secret Hacking</a></li>
+            </ul>
+        </li>
+        <li><a href="./contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+ 
+
+<main>
+    <div class="category-divider" id="categoria1" onclick="toggleCategory('categoria1')">
+      <h2>Categoria 1</h2>
+      <div class="toggle-arrow">&#9662;</div>
+    </div>
+    <div class="lesson lesson-link categoria1">
+      <a href="index.html" class="lesson-link">
+        <img src="../Member_Image/img.png" alt="Lezione 1">
+        <h3>Lezione 1: Introduzione alla sicurezza informatica</h3>
+        <p>Contenuto della lezione 1...</p>
+      </a>
+    </div>
+    <div class="lesson lesson-link categoria1">
+      <a href="index.html" class="lesson-link">
+        <img src="img.png" alt="Lezione 2">
+        <h3>Lezione 2: Sicurezza dei dati</h3>
+        <p>Contenuto della lezione 2...</p>
+      </a>
+    </div>
+  <br>
+    <div class="category-divider" id="categoria2" onclick="toggleCategory('categoria2')">
+      <h2>Categoria 2</h2>
+      <div class="toggle-arrow">&#9662;</div>
+    </div>
+    <div class="lesson lesson-link categoria2">
+      <a href="index.html" class="lesson-link">
+        <img src="./Header/study-7217599_1280.jpg" alt="Lezione 3">
+        <h3>Lezione 3: Categoria 2</h3>
+        <p>Contenuto della lezione 3...</p>
+      </a>
+    </div>
+  <br>
+    <div class="category-divider" id="categoria3" onclick="toggleCategory('categoria3')">
+      <h2>Categoria 3</h2>
+      <div class="toggle-arrow">&#9662;</div>
+    </div>
+    <div class="lesson lesson-link categoria3">
+      <a href="index.html" class="lesson-link">
+        <img src="./Header/study-7217599_1280.jpg" alt="Lezione 4">
+        <h3>Lezione 4: Categoria 3</h3>
+        <p>Contenuto della lezione 4...</p>
+      </a>
+    </div>
+  </main>
+  
+    <footer class="footer">
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social-icon">
+        <li class="social-icon__item"><a class="social-icon__link" href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#"><ion-icon name="logo-tiktok"></ion-icon></a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
+    </ul>
+    <ul class="menu">
+        <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Services</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Team</a></li>
+        <li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+    </ul>
+    <p>&copy; 2023  School Basic | All Rights Reserved</p>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
+ 
