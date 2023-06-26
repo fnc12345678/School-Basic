@@ -1,15 +1,1 @@
-RewriteEngine On
 
-# Redirect www to non-www (o viceversa)
-# Replace "example.com" with your own domain name
-RewriteCond %{HTTP_HOST} ^www.example.com [NC]
-RewriteRule ^(.*)$https://school-basic.netlify.app/$1 [L,R=301]
-
-# Redirect from HTTP to HTTPS
-# Uncomment the following lines if you have an SSL certificate installed
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://example.com/$1 [L,R=301]
-
-# Imposta il fuso orario
-# Puoi sostituire "Europe/Rome" con il tuo fuso orario preferito
-SetEnv TZ Europe/Rome
