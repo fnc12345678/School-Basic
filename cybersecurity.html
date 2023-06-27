@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://raw.githack.com/fnc12345678/CSS/main/style.css">
 <link rel="stylesheet" href="https://raw.githack.com/fnc12345678/JS/main/script.css">
     <link rel="icon" type="image/png" href="https://i.postimg.cc/1X4J8QpB/icon.png">
+    <script src="JS/script.js"></script>
 
   <script>
 
@@ -19,20 +20,7 @@
       window.history.replaceState({}, '', newUrl);
     }
   };
-    function toggleCategory(category) {
-  var categoryDivider = document.getElementById(category);
-  categoryDivider.classList.toggle("open");
-
-  var lessons = document.getElementsByClassName(category);
-  for (var i = 0; i < lessons.length; i++) {
-    lessons[i].classList.toggle("open");
-  }
-}
-
-function toggleAnswer(questionNumber) {
-  const answer = document.getElementById(`answer${questionNumber}`);
-  answer.style.display = answer.style.display === "block" ? "none" : "block";
-}
+ 
 </script>
 </head>
 <body>
@@ -69,7 +57,7 @@ function toggleAnswer(questionNumber) {
       <div class="toggle-arrow">&#9662;</div>
     </div>
     <div class="lesson lesson-link categoria1">
-      <a href="index.html" class="lesson-link">
+      <a href="CyberSecurity/lessons1.html" class="lesson-link">
         <img src="https://i.postimg.cc/L8ZnpRxR/cyber-security-3480163-1280.jpg" alt="Lezione 1">
         <h3>Lessons 1: Introduction Of Cyber Security</h3>
         <p>Find out more</p>
