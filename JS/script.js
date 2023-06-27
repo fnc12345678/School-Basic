@@ -6,11 +6,11 @@ function copyContent() {
   var container1Clone = container1.cloneNode(true);
 
   // Rimuovi il testo indesiderato dal clone del primo contenitore
-  var unwantedText = container1Clone.querySelector('If you want to copy the content of the lessons click on the button');
+  var unwantedText = container1Clone.querySelector('.button-text');
   unwantedText.remove();
 
   // Seleziona l'elemento del secondo contenitore
-  var container2 = document.querySelector('.content1');
+  var container2 = document.querySelector('.content');
 
   // Clona l'elemento del secondo contenitore per conservare la struttura HTML
   var container2Clone = container2.cloneNode(true);
@@ -18,8 +18,14 @@ function copyContent() {
   // Crea un elemento textarea
   var textarea = document.createElement('textarea');
 
-  // Concatena il testo del primo e del secondo contenitore nel textarea
-  textarea.value = container1Clone.textContent + container2Clone.textContent;
+  // Prendi il titolo dal primo contenitore
+  var title = container1Clone.querySelector('h1').textContent.trim();
+
+  // Prendi il contenuto dal secondo contenitore
+  var content = container2Clone.textContent.trim();
+
+  // Concatena il titolo e il contenuto nel textarea
+  textarea.value = title + '\n\n' + content;
 
   // Aggiungi il textarea al documento
   document.body.appendChild(textarea);
