@@ -1,6 +1,6 @@
 function copyContent() {
   // Seleziona l'elemento del titolo del primo contenitore
-  var titleElement = document.querySelector('.content1 h1');
+  var titleElement = document.querySelector('.content1');
   // Seleziona l'elemento del contenuto del secondo contenitore
   var contentElement = document.querySelector('.content');
 
