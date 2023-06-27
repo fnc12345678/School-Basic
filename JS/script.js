@@ -1,17 +1,25 @@
 function copyContent() {
-  // Seleziona l'elemento del titolo del primo contenitore
-  var titleElement = document.querySelector('.content1');
-  // Seleziona l'elemento del contenuto del secondo contenitore
-  var contentElement = document.querySelector('.content');
+  // Seleziona l'elemento del primo contenitore
+  var container1 = document.querySelector('.container1');
 
-  // Ottieni il titolo del primo contenitore e rimuovi il testo indesiderato
-  var titleText = titleElement.innerText.replace("If you want to copy the content of the lessons click on the button", "").trim();
+  // Clona l'elemento del primo contenitore per conservare la struttura HTML
+  var container1Clone = container1.cloneNode(true);
+
+  // Rimuovi il testo indesiderato dal clone del primo contenitore
+  var unwantedText = container1Clone.querySelector('If you want to copy the content of the lessons click on the button');
+  unwantedText.remove();
+
+  // Seleziona l'elemento del secondo contenitore
+  var container2 = document.querySelector('.container');
+
+  // Clona l'elemento del secondo contenitore per conservare la struttura HTML
+  var container2Clone = container2.cloneNode(true);
 
   // Crea un elemento textarea
   var textarea = document.createElement('textarea');
 
-  // Imposta il valore del textarea con il titolo e il contenuto
-  textarea.value = titleText + '\n\n' + contentElement.innerText.trim();
+  // Concatena il testo del primo e del secondo contenitore nel textarea
+  textarea.value = container1Clone.textContent + container2Clone.textContent;
 
   // Aggiungi il textarea al documento
   document.body.appendChild(textarea);
