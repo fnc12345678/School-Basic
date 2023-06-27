@@ -1,6 +1,6 @@
 function copyContent() {
   // Seleziona l'elemento del primo contenitore
-  var container1 = document.querySelector('.container1');
+  var container1 = document.querySelector('.content1');
 
   // Clona l'elemento del primo contenitore per conservare la struttura HTML
   var container1Clone = container1.cloneNode(true);
@@ -10,7 +10,7 @@ function copyContent() {
   unwantedText.remove();
 
   // Seleziona l'elemento del secondo contenitore
-  var container2 = document.querySelector('.container');
+  var container2 = document.querySelector('.content1');
 
   // Clona l'elemento del secondo contenitore per conservare la struttura HTML
   var container2Clone = container2.cloneNode(true);
