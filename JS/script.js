@@ -13,19 +13,16 @@ function toggleAnswer(questionNumber) {
   answer.style.display = answer.style.display === "block" ? "none" : "block";
 }
 
-
 function createSearchResultHTML(lessonTitle, lessonContent, lessonLink, lessonImage) {
   return `
   <div class="result">
-  <div id="searchResultContainer" class="result-container"></div>
-      <a href="${lessonLink}" class="lesson-link">
-        <img src="${lessonImage}" alt="...">
-        <h3>${lessonTitle}</h3>
-        <div class="lesson-content">
-          ${lessonContent}
-        </div>
-      </a>
-    </div>
+    <a href="${lessonLink}" class="lesson-link">
+      <img src="${lessonImage}" alt="...">
+      <h3>${lessonTitle}</h3>
+      <div class="lesson-content">
+        ${lessonContent}
+      </div>
+    </a>
   </div>
   `;
 }
@@ -35,7 +32,6 @@ function performSearch() {
   var searchTerm = document.getElementById("searchInput").value.trim().toLowerCase();
   var lessons = document.getElementsByClassName("lesson");
   var resultContainer = document.getElementById("searchResultContainer");
-  var noResultsMessage = document.getElementById("noResultsMessage");
   resultContainer.innerHTML = "";
   noResultsMessage.innerHTML = "";
   var searchRegex = new RegExp(searchTerm, "gi");
@@ -48,8 +44,8 @@ function performSearch() {
   } else {
     for (var i = 0; i < lessons.length; i++) {
       var lesson = lessons[i];
-      var lessonTitle = lesson.getElementsByTagName("h3")[0].textContent.toLowerCase();
-      var lessonContent = lesson.getElementsByClassName("lesson-content")[0].innerHTML.toLowerCase();
+      var lessonTitle = lesson.getElementsByTagName("h3")[0].textContent;
+      var lessonContent = lesson.getElementsByClassName("lesson-content")[0].innerHTML;
       var lessonLink = lesson.getElementsByTagName("a")[0].getAttribute("href");
       var lessonImage = lesson.getElementsByTagName("img")[0].getAttribute("src");
 
@@ -62,10 +58,8 @@ function performSearch() {
   }
   if (hasResults) {
     resultContainer.style.display = "block";
-    noResultsMessage.style.display = "none";
   } else {
     resultContainer.style.display = "none";
-    noResultsMessage.style.display = "block";
 
     if (searchTerm !== "") {
       window.location.href = "404.html";
