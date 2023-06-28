@@ -44,6 +44,7 @@ function performSearch() {
   if (searchTerm === "") {
     resultContainer.style.display = "none";
     noResultsMessage.style.display = "none";
+    hasResults = true
   } else {
     for (var i = 0; i < lessons.length; i++) {
       var lesson = lessons[i];
@@ -65,6 +66,9 @@ function performSearch() {
   } else {
     resultContainer.style.display = "none";
     noResultsMessage.style.display = "block";
-    window.location.href = "404.html";
+
+    if (searchTerm !== "") {
+      window.location.href = "404.html";
+    }
   }
 }
