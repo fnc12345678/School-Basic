@@ -6,10 +6,130 @@
   <title>Lezioni di Cyber Security</title>
 <link rel="stylesheet" href="https://raw.githack.com/fnc12345678/CSS/main/cybersecurity-style.css">
 <link rel="stylesheet" href="https://raw.githack.com/fnc12345678/CSS/main/style.css">
-<link rel="stylesheet" href="https://raw.githack.com/fnc12345678/JS/main/script.css">
-    <link rel="icon" type="image/png" href="https://i.postimg.cc/1X4J8QpB/icon.png">
+   <link rel="icon" type="image/png" href="https://i.postimg.cc/1X4J8QpB/icon.png">
     <script src="JS/script.js"></script>
 
+  <style>
+    /* Stile per la barra di ricerca */
+    .search-input {
+      width: 200px;
+      padding: 8px 12px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #f5f5f5;
+    }
+
+    /* Stile per il pulsante di ricerca */
+    .search-button {
+      padding: 8px 16px;
+      font-size: 16px;
+      background-color: #007aff;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .result {
+  margin: 4px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  display: none;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 10px;
+}
+
+
+    /* Stile per il contenuto della lezione */
+    .lesson-content {
+
+      margin: 10px;
+    }
+
+    .result h3 {
+      margin: 10px;
+    }
+
+    .no-results {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+  </style>
+  <script>
+    function createSearchResultHTML(lessonTitle, lessonContent, lessonLink, lessonImage) {
+      return `
+        <div class="result">
+          <a href="${lessonLink}" class="lesson-link">
+            <img src="${lessonImage}" alt="...">
+            <h3>${lessonTitle}</h3>
+            <div class="lesson-content">
+              ${lessonContent}
+            </div>
+          </a>
+        </div>
+
+      `;
+    }
+
+ 
+    function performSearch() {
+  var searchTerm = document.getElementById("searchInput").value.trim().toLowerCase();
+  var lessons = document.getElementsByClassName("lesson");
+  var resultContainer = document.getElementById("searchResultContainer");
+  var noResultsMessage = document.getElementById("noResultsMessage");
+  resultContainer.innerHTML = "";
+  noResultsMessage.innerHTML = "";
+  var searchRegex = new RegExp(searchTerm, "gi");
+  var hasResults = false;
+
+  if (searchTerm === "") {
+    resultContainer.style.display = "none";
+    noResultsMessage.style.display = "none";
+  } else {
+    for (var i = 0; i < lessons.length; i++) {
+      var lesson = lessons[i];
+      var lessonTitle = lesson.getElementsByTagName("h3")[0].textContent;
+      var lessonContent = lesson.getElementsByClassName("lesson-content")[0].innerHTML;
+      var lessonLink = lesson.getElementsByTagName("a")[0].getAttribute("href");
+      var lessonImage = lesson.getElementsByTagName("img")[0].getAttribute("src");
+
+      if (searchRegex.test(lessonTitle) || searchRegex.test(lessonContent)) {
+        resultContainer.innerHTML += createSearchResultHTML(lessonTitle, lessonContent, lessonLink, lessonImage);
+        hasResults = true;
+      }
+      if (hasResults) {
+      resultContainer.style.display = "block";
+      noResultsMessage.style.display = "none";
+    } else {
+      resultContainer.style.display = "none";
+      noResultsMessage.style.display = "block";
+      window.location.href = "404.html";
+    }
+    }
+
+    
+  }
+}
+
+
+  </script>
   <script>
 
      window.onload = function() {
