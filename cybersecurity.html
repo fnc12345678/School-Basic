@@ -7,9 +7,21 @@
     <link rel="stylesheet" href="https://raw.githack.com/fnc12345678/CSS/main/search-style.css">
     <link rel="icon" type="image/png" href="https://i.postimg.cc/1X4J8QpB/icon.png">
      <script src="JS/script.js"></script>
-<style>
-  
-</style>
+     <style>
+      .open {
+        display: block;
+      }
+    
+      .lesson {
+        display: none;
+      }
+
+      .lesson-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+    </style>
     
 </head>
 <body>
@@ -57,10 +69,13 @@
   <div id="noResultsMessage"></div>
   <main>
     <div class="category-divider" id="categoria1" onclick="toggleCategory('categoria1')">
-      <h2>Introduction</h2>
-    </div>
+      <br>
 
-    <div class="lesson-container" id="lesson-container">
+      <h2>Categoria 1</h2>
+      <br>
+    </div>
+  
+    <div class="lesson-container" id="lesson-container1">
       <div class="lesson result lesson-link" data-category="categoria1">
         <a href="CyberSecurity/lessons1.html" class="lesson-link">
           <img src="https://i.postimg.cc/L8ZnpRxR/cyber-security-3480163-1280.jpg" alt="Lezione 1">
@@ -70,7 +85,7 @@
           </div>
       </a>
       </div>
-
+  
       <div class="lesson lesson-link" data-category="categoria1">
         <a href="index.html" class="lesson-link">
           <img src="img.png" alt="Lezione 2">
@@ -81,34 +96,39 @@
         </a>
       </div>
     </div>
-
+  
+    <br>
+    <br>
+  
+    <div class="category-divider" id="categoria2" onclick="toggleCategory('categoria2')">
       <br>
+      <h2>Categoria 2</h2>
       <br>
-      <div class="category-divider" id="categoria1" onclick="toggleCategory('categoria2')">
-        <h2>Introduction 1</h2>
+    </div>
+  
+    <div class="lesson-container" id="lesson-container2">
+      <div class="lesson result lesson-link" data-category="categoria2">
+        <a href="CyberSecurity/lessons1.html" class="lesson-link">
+          <img src="https://i.postimg.cc/L8ZnpRxR/cyber-security-3480163-1280.jpg" alt="Lezione 1">
+          <h3>Lezione 1: Introduction Of Cyber Security</h3>
+          <div class="lesson-content">
+            <p>Scopri di più</p>
+          </div>
+        </a>
       </div>
   
-      <div class="lesson-container" id="lesson-container">
-        <div class="lesson result lesson-link" data-category="categoria2">
-          <a href="CyberSecurity/lessons1.html" class="lesson-link">
-            <img src="https://i.postimg.cc/L8ZnpRxR/cyber-security-3480163-1280.jpg" alt="Lezione 3">
-            <h3>Lessons 3: Introduction Of Cyber Security</h3>
-            <div class="lesson-content">
-                <p>Find out more</p>
-            </div>
+      <div class="lesson lesson-link" data-category="categoria2">
+        <a href="index.html" class="lesson-link">
+          <img src="img.png" alt="Lezione 2">
+          <h3>Lezione 2: Sicurezza dei dati</h3>
+          <div class="lesson-content">
+            <p>Contenuto della lezione 2...</p>
+          </div>
         </a>
-        </div>
-  
-        <div class="lesson lesson-link" data-category="categoria2">
-          <a href="index.html" class="lesson-link">
-            <img src="img.png" alt="Lezione 4">
-            <h3>Lezione 4: Sicurezza dei dati</h3>
-            <div class="lesson-content">
-              <p>Contenuto della lezione 4...</p>
-            </div>
-          </a>
-        </div>
-      </div>     
+      </div>
+    </div>
+  </main>
+    
     <footer class="footer">
       <div class="waves">
           <div class="wave" id="wave1"></div>
