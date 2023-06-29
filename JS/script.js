@@ -120,7 +120,7 @@ function performSearch() {
     resultContainer.style.display = "none";
 
     if (searchTerm !== "") {
-      window.location.href = "404.html";
+      window.location.href = "Error/404.html";
     }
   }
 }
