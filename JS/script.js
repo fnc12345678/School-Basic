@@ -1,16 +1,17 @@
 function toggleCategory(category) {
-  var categoryDivider = document.getElementById(category);
-  categoryDivider.classList.toggle("open");
+      var categoryDivider = document.getElementById(category);
+      categoryDivider.classList.toggle("open");
 
-  var lessons = document.getElementsByClassName(category);
-  for (var i = 0; i < lessons.length; i++) {
-    lessons[i].classList.toggle("open");
-  }
+      var lessonsContainer = document.getElementById("lesson-container");
+      var lessons = lessonsContainer.querySelectorAll(`[data-category="${category}"]`);
+      for (var i = 0; i < lessons.length; i++) {
+        lessons[i].classList.toggle("open");
+      }
 }
 
 function toggleAnswer(questionNumber) {
-  const answer = document.getElementById(`answer${questionNumber}`);
-  answer.style.display = answer.style.display === "block" ? "none" : "block";
+      const answer = document.getElementById(`answer${questionNumber}`);
+      answer.style.display = answer.style.display === "block" ? "none" : "block";
 }
 
 
